@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <style>
+      /* Basic styling for the body to include padding and centered text */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+      }
+
+      /* Styling for forms to add spacing and center alignment */
+      form {
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: white;
+        border-radius: 8px;
+        width: 300px; /* Fixed width, you can adjust this as needed */
+      }
+
+      input,
+      button {
+        width: 100%; /* Make inputs and buttons expand to the full width of the form */
+        padding: 10px;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #5c67f2;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #4a54e1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Management</h1>
+
+    <!-- Form to create a user -->
+    <h2>Create User</h2>
+    <form id="createUser">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Create User</button>
+    </form>
+
+    <!-- Form to retrieve a user by ID -->
+    <h2>Get User</h2>
+    <form id="getUser">
+      <input type="number" id="userId" placeholder="User ID" required />
+      <button type="submit">Get User</button>
+    </form>
+
+    <!-- Form to update a user -->
+    <h2>Update User</h2>
+    <form id="updateUser">
+      <input type="number" id="updateUserId" placeholder="User ID" required />
+      <input type="text" id="updateName" placeholder="New Name" />
+      <input type="email" id="updateEmail" placeholder="New Email" />
+      <button type="submit">Update User</button>
+    </form>
+
+    <!-- Form to delete a user -->
+    <h2>Delete User</h2>
+    <form id="deleteUser">
+      <input type="number" id="deleteUserId" placeholder="User ID" required />
+      <button type="submit">Delete User</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
